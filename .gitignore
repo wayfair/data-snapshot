@@ -1,0 +1,5 @@
+node_modules
+coverage
+dist
+
+src/__tests__/__data_snapshots__/index.spec.js.snap
