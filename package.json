@@ -5,6 +5,13 @@
   "author": "Nick Dreckshage <ndreckshage@wayfair.com>",
   "license": "BSD-2-Clause",
   "main": "dist",
+  "repository": "https://github.com/wayfair/data-snapshot",
+  "keywords": [
+    "unit-test",
+    "snapshot",
+    "jest",
+    "data"
+  ],
   "scripts": {
     "build": "npm run build:dist && npm run build:flow",
     "build:clean": "rimraf dist",

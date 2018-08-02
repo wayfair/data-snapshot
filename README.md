@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/wayfair/data-snapshot.svg?branch=master)](https://travis-ci.org/wayfair/data-snapshot)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![codecov](https://codecov.io/gh/wayfair/data-snapshot/branch/master/graph/badge.svg)](https://codecov.io/gh/wayfair/data-snapshot)
+[![npm version](https://badge.fury.io/js/data-snapshot.svg)](https://badge.fury.io/js/data-snapshot)
+[![license](https://img.shields.io/github/license/wayfair/data-snapshot.svg)](https://github.com/wayfair/data-snapshot/blob/master/LICENSE.md)
 
 # data-snapshot 📸
 
