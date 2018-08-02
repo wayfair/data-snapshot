@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/wayfair/data-snap.svg?branch=master)](https://travis-ci.org/wayfair/data-snap)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![codecov](https://codecov.io/gh/wayfair/data-snap/branch/master/graph/badge.svg)](https://codecov.io/gh/wayfair/data-snap)
+
 # data-snap
 
 `data-snap` is a generic mock data manager **for JavaScript tests**, that helps you use data from real endpoints in tests.
