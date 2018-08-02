@@ -1,6 +1,6 @@
 /* eslint-env jest */
 import rimraf from 'rimraf';
-import dataSnap from './../index';
+import dataSnapshot from './../index';
 import fs from 'fs';
 
 const snapshotDir = `${__dirname}/__data_snapshots__`;
@@ -22,7 +22,7 @@ beforeEach(() => {
 });
 
 test('calls thunk on first run', async () => {
-  const data = await dataSnap('a', mockThunk);
+  const data = await dataSnapshot('a', mockThunk);
   expect(mockPromise.mock.calls.length).toBe(1);
   expect(mockThunk.mock.calls.length).toBe(1);
   expect(data.foo).toBe('bar');
@@ -30,22 +30,22 @@ test('calls thunk on first run', async () => {
 
 test('writes a __data_snapshot__ file to disk', async () => {
   expect(fs.existsSync(snapshotDir)).toBe(false);
-  await dataSnap('b', mockThunk);
+  await dataSnapshot('b', mockThunk);
   expect(fs.existsSync(snapshotDir)).toBe(true);
 });
 
 test('resolves from disk on 2nd hit', async () => {
-  await dataSnap('c', mockThunk);
-  const data = await dataSnap('c', mockThunk);
+  await dataSnapshot('c', mockThunk);
+  const data = await dataSnapshot('c', mockThunk);
   expect(mockPromise.mock.calls.length).toBe(1);
   expect(mockThunk.mock.calls.length).toBe(1);
   expect(data.foo).toBe('bar');
 });
 
 test('calls update', async () => {
-  await dataSnap('d', mockThunk);
+  await dataSnapshot('d', mockThunk);
   process.argv.push('--updateSnapshot');
-  const data = await dataSnap('d', mockThunk);
+  const data = await dataSnapshot('d', mockThunk);
   process.argv.pop();
   expect(mockPromise.mock.calls.length).toBe(2);
   expect(mockThunk.mock.calls.length).toBe(2);
@@ -53,9 +53,9 @@ test('calls update', async () => {
 });
 
 test('logs expiry info but stil resolves from disk', async () => {
-  await dataSnap('e', mockThunk, {expires: Date.now()});
+  await dataSnapshot('e', mockThunk, {expires: Date.now()});
   const spy = jest.spyOn(global.console, 'log').mockImplementation(() => {});
-  const data = await dataSnap('e', mockThunk);
+  const data = await dataSnapshot('e', mockThunk);
   expect(spy.mock.calls.length).toBe(1);
   expect(
     spy.mock.calls[0][0].includes(

@@ -23,13 +23,13 @@ npm i --save-dev data-snapshot
 ## Usage
 
 ```javascript
-import dataSnap from 'data-snapshot';
+import dataSnapshot from 'data-snapshot';
 
 // hits endpoint on first run; resolves from disk on 2nd
 const fetchData = id => fetch(`/api/${id}`).then(r => r.json());
 
 test('some-spec', async () => {
-  const data = await dataSnap('key', () => fetchData(1));
+  const data = await dataSnapshot('key', () => fetchData(1));
   expect(data.a).toBe(true);
 });
 ```
@@ -40,7 +40,7 @@ The data is never actually expired (to avoid CI unintentionally triggering an Aj
 
 ```
 const ONE_MONTHISH = 1000 * 60 * 60 * 24 * 30;
-dataSnap('key', thunkPromise, {expires: Date.now() + ONE_MONTHISH});
+dataSnapshot('key', thunkPromise, {expires: Date.now() + ONE_MONTHISH});
 ```
 
 ## API
