@@ -1,7 +1,7 @@
 import {callingFilePath} from '../utils';
 
 const windowsErrorStack = `Error
-    at thunkSnap (C:\\Users\\me\\data-snapshot\\src\\index.js:56:22)
+    at dataSnapshot (C:\\Users\\me\\data-snapshot\\src\\index.js:56:22)
     at _callee5$ (C:\\Users\\me\\data-snapshot\\src\\__tests__\\index.spec.js:148:38)
     at tryCatch (C:\\Users\\me\\data-snapshot\\node_modules\\regenerator-runtime\\runtime.js:62:40)
     at Generator.invoke [as _invoke] (C:\\Users\\me\\data-snapshot\\node_modules\\regenerator-runtime\\runtime.js:296:22)
@@ -18,7 +18,7 @@ const windowsErrorStack = `Error
     at <anonymous>`;
 
 const macErrorStack = `Error
-    at thunkSnap (/Users/me/data-snapshot/src/index.js:53:20)
+    at dataSnapshot (/Users/me/data-snapshot/src/index.js:53:20)
     at _callee5$ (/Users/me/data-snapshot/src/__tests__/index.spec.js:148:38)
     at tryCatch (/Users/me/data-snapshot/node_modules/regenerator-runtime/runtime.js:62:40)
     at Generator.invoke [as _invoke] (/Users/me/data-snapshot/node_modules/regenerator-runtime/runtime.js:296:22)

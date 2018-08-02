@@ -46,7 +46,7 @@ dataSnap('key', thunkPromise, {expires: Date.now() + ONE_MONTHISH});
 ## API
 
 ```
-thunkSnap<D>(
+dataSnapshot<D>(
   name: string,
   thunkPromise: () => Promise<D>,
   opts: {expires?: number} = {}

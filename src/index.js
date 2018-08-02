@@ -31,7 +31,7 @@ const ensureDirectoryExistence = filePath => {
 type ThunkPromise<D> = () => Promise<D>;
 type Opts = {expires?: number};
 
-const thunkSnap = <D>(
+const dataSnapshot = <D>(
   dataKey: string,
   thunkPromise: ThunkPromise<D>,
   opts: Opts = {}
@@ -104,4 +104,4 @@ const thunkSnap = <D>(
   });
 };
 
-export default thunkSnap;
+export default dataSnapshot;
