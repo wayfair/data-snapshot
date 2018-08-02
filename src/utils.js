@@ -1,5 +1,5 @@
 /**
- * data-snap utils
+ * data-snapshot utils
  *
  * @flow
  */

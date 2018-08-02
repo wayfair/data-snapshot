@@ -1,5 +1,5 @@
 {
-  "name": "data-snap",
+  "name": "data-snapshot",
   "version": "1.0.0-beta1",
   "description": "Generic mock data manager for real endpoints.",
   "author": "Nick Dreckshage <ndreckshage@wayfair.com>",
@@ -41,5 +41,8 @@
       "/node_modules/",
       "/dist/"
     ]
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

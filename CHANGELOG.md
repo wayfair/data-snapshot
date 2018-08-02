@@ -1,3 +1,3 @@
-## 0.5.0
+## 1.0.0
 
-- Initial release of `data-snap`
+- Initial release of `data-snapshot`

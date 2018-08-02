@@ -1,5 +1,5 @@
 /**
- * data-snap
+ * data-snapshot
  *
  * generic thunk api for storing promise data in a __data_snapshot__ file
  * for use in test to store real mock data

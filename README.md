@@ -1,12 +1,12 @@
-[![Build Status](https://travis-ci.org/wayfair/data-snap.svg?branch=master)](https://travis-ci.org/wayfair/data-snap)
+[![Build Status](https://travis-ci.org/wayfair/data-snapshot.svg?branch=master)](https://travis-ci.org/wayfair/data-snapshot)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![codecov](https://codecov.io/gh/wayfair/data-snap/branch/master/graph/badge.svg)](https://codecov.io/gh/wayfair/data-snap)
+[![codecov](https://codecov.io/gh/wayfair/data-snapshot/branch/master/graph/badge.svg)](https://codecov.io/gh/wayfair/data-snapshot)
 
-# data-snap
+# data-snapshot 📸
 
-`data-snap` is a generic mock data manager **for JavaScript tests**, that helps you use data from real endpoints in tests.
+`data-snapshot` is a generic mock data manager **for JavaScript tests**, that helps you use data from real endpoints in tests.
 
-On first run / update, `data-snap` executes the thunk (which returns a promise), and then writes the result of the promise to disk to avoid network calls on subsequent test runs.
+On first run / update, `data-snapshot` executes the thunk (which returns a promise), and then writes the result of the promise to disk to avoid network calls on subsequent test runs.
 
 A `__data_snapshots__` is created adjacent to your test file (similar to Jest's `__snapshots__`), with the same name as your test file. Mock data is stored within that file.
 
@@ -17,13 +17,13 @@ Data snapshots should be committed to version control, as regular snapshot files
 ### Installing
 
 ```
-npm i --save-dev data-snap
+npm i --save-dev data-snapshot
 ```
 
 ## Usage
 
 ```javascript
-import dataSnap from 'data-snap';
+import dataSnap from 'data-snapshot';
 
 // hits endpoint on first run; resolves from disk on 2nd
 const fetchData = id => fetch(`/api/${id}`).then(r => r.json());
