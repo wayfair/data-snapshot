@@ -11,7 +11,7 @@
     "build:dist": "babel src --out-dir dist --ignore '**/__tests__/**'",
     "build:flow": "flow-copy-source -v -i '**/__tests__/**' src dist",
     "prepublish": "npm run build:clean && npm run test && npm run build",
-    "test": "eslint src && flow && jest --coverage",
+    "test": "eslint src && flow && jest",
     "jest": "jest"
   },
   "dependencies": {
@@ -33,6 +33,8 @@
     "rimraf": "2.6.2"
   },
   "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage/",
     "testRegex": "__tests__[\\/].+(spec)\\.js$",
     "testURL": "http://localhost/",
     "testPathIgnorePatterns": [
