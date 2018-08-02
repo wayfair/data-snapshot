@@ -1,6 +1,6 @@
 {
   "name": "data-snapshot",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0",
   "description": "Generic mock data manager for real endpoints.",
   "author": "Nick Dreckshage <ndreckshage@wayfair.com>",
   "license": "BSD-2-Clause",
