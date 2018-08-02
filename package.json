@@ -10,7 +10,7 @@
     "build:clean": "rimraf dist",
     "build:dist": "babel src --out-dir dist --ignore '**/__tests__/**'",
     "build:flow": "flow-copy-source -v -i '**/__tests__/**' src dist",
-    "prepublish": "npm run build:clean && npm run test && npm run build",
+    "prepublishOnly": "npm run build:clean && npm run test && npm run build",
     "test": "eslint src && flow && jest",
     "jest": "jest"
   },
