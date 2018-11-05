@@ -34,6 +34,16 @@ const macErrorStack = `Error
     at promise.then (/Users/me/data-snapshot/node_modules/jest-jasmine2/build/queue_runner.js:73:82)
     at <anonymous>`;
 
+const originalGetState = global.expect.getState;
+
+beforeEach(() => {
+  delete global.expect.getState;
+});
+
+afterEach(() => {
+  global.expect.getState = originalGetState;
+});
+
 test('handles windows error', () => {
   expect(callingFilePath(windowsErrorStack)).toBe(
     'C:\\Users\\me\\data-snapshot\\src\\__tests__\\index.spec.js'
@@ -43,5 +53,14 @@ test('handles windows error', () => {
 test('handles mac error', () => {
   expect(callingFilePath(macErrorStack)).toBe(
     '/Users/me/data-snapshot/src/__tests__/index.spec.js'
+  );
+});
+
+test('handles `testPath` in jest environment', () => {
+  global.expect.getState = () => ({
+    testPath: '/Users/me/data-snapshot/src/__tests__/mocked.spec.js'
+  });
+  expect(callingFilePath()).toBe(
+    '/Users/me/data-snapshot/src/__tests__/mocked.spec.js'
   );
 });
