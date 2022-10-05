@@ -1,0 +1,28 @@
+name: Feature Request
+description: Suggest a feature for this project
+title: "[Feat] <title>"
+body:
+- type: textarea
+  attributes:
+    label: Problem Statement
+    description: A clear and concise description of what you want and what your use case is.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Proposed Solution
+    description: A clear and concise description of what you want to happen.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Alternatives Considered
+    description: A clear and concise description of any alternative solutions or features you've considered.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Additional Context
+    description: Please provide any other information that may be relevant.
+  validations:
+    required: false

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":dependencyDashboard",
+    ":rebaseStalePrs"
+  ],
+  "schedule": [
+    "before 3am every weekday" 
+  ],
+  "enabledManagers": [
+    "npm",
+    "dockerfile",
+    "github-actions"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePrefixes": ["babel"],
+      "groupName": "Babel"
+    },
+    {
+      "matchPackagePrefixes": ["eslint"],
+      "groupName": "Eslint"
+    },
+    {
+      "matchPackagePrefixes": ["flow"],
+      "groupName": "Flow"
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "groupName": "Minor Packages",
+      "automerge": true
+    }
+  ]
+}
