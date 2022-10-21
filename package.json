@@ -35,7 +35,7 @@
     "eslint": "4.19.1",
     "flow-bin": "0.66.0",
     "flow-copy-source": "2.0.2",
-    "jest": "23.6.0",
+    "jest": "24.0.0",
     "prettier": "1.14.0",
     "rimraf": "2.6.2"
   },
