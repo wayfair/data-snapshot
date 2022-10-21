@@ -18,7 +18,7 @@ Data snapshots should be committed to version control, as regular snapshot files
 
 ### Installing
 
-```
+```bash
 npm i --save-dev data-snapshot
 ```
 
@@ -40,14 +40,14 @@ test('some-spec', async () => {
 
 The data is never actually expired (to avoid CI unintentionally triggering an Ajax call, etc). However, if you would like to be reminded with a console warning to update your data periodically, set an expires flag.
 
-```
+```javascript
 const ONE_MONTHISH = 1000 * 60 * 60 * 24 * 30;
 dataSnapshot('key', thunkPromise, {expires: Date.now() + ONE_MONTHISH});
 ```
 
 ## API
 
-```
+```javascript
 dataSnapshot<D>(
   name: string,
   thunkPromise: () => Promise<D>,
@@ -59,7 +59,7 @@ dataSnapshot<D>(
 
 ## Running the tests
 
-```
+```bash
 npm test
 ```
 

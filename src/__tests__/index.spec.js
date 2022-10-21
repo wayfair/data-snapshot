@@ -6,7 +6,7 @@ import fs from 'fs';
 const snapshotDir = `${__dirname}/__data_snapshots__`;
 
 const fetchData = () =>
-  new Promise(resolve => {
+  new Promise((resolve) => {
     setTimeout(() => {
       resolve({foo: 'bar'});
     }, 20);
