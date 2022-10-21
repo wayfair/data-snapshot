@@ -20,6 +20,7 @@
     "prepublishOnly": "npm run build:clean && npm run test && npm run build",
     "test": "eslint src && flow && jest",
     "lint": "eslint src/**/*.js",
+    "lint:md": "markdownlint **/*.md --ignore node_modules",
     "jest": "jest",
     "format": "prettier --write src/**/*.js",
     "format:check": "prettier --check src/**/*.js"
@@ -39,8 +40,10 @@
     "flow-bin": "0.66.0",
     "flow-copy-source": "2.0.2",
     "jest": "23.6.0",
+    "markdownlint-cli": "^0.31.1",
     "prettier": "2.7.1",
     "rimraf": "2.6.2"
+
   },
   "jest": {
     "collectCoverage": true,
