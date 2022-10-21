@@ -6,6 +6,13 @@ on: # Rebuild any PRs and main branch changes
       - main
   pull_request:
 
+step-node: &setup-node
+  uses: actions/setup-node@v3
+  with:
+    node-version: 14.x
+    cache: yarn
+
+
 
 jobs:
 
@@ -15,10 +22,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14.x
-          cache: yarn
+      - <<: *setup-node
       - name: Validate cache
         run: yarn install --frozen-lockfile
 
@@ -29,10 +33,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14.x
-          cache: yarn
+      - <<: *setup-node
       - name: install
         run: yarn install --frozen-lockfile
       - name: test
@@ -45,10 +46,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14.x
-          cache: yarn
+      - <<: *setup-node
       - name: install
         run: yarn install --frozen-lockfile
       - name: lint
@@ -63,10 +61,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 14.x
-          cache: yarn
+      - <<: *setup-node
       - name: install
         run: yarn install --frozen-lockfile
       - name: format-check
