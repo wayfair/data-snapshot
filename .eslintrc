@@ -1,6 +1,6 @@
 {
   "extends": "eslint:recommended",
-  "parser": "@babel/eslint-parser",
+  "parser": "babel-eslint",
   "env": {
     "node": true,
     "es6": true,
