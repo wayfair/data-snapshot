@@ -19,7 +19,10 @@
     "build:flow": "flow-copy-source -v -i '**/__tests__/**' src dist",
     "prepublishOnly": "npm run build:clean && npm run test && npm run build",
     "test": "eslint src && flow && jest",
-    "jest": "jest"
+    "lint": "eslint src/**/*.js",
+    "jest": "jest",
+    "format": "prettier --write src/**/*.js",
+    "format:check": "prettier --check src/**/*.js"
   },
   "dependencies": {
     "chalk": "2.4.1"
@@ -36,7 +39,7 @@
     "flow-bin": "0.66.0",
     "flow-copy-source": "2.0.2",
     "jest": "23.6.0",
-    "prettier": "1.14.0",
+    "prettier": "2.7.1",
     "rimraf": "2.6.2"
   },
   "jest": {
