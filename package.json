@@ -42,7 +42,7 @@
     "jest": "23.6.0",
     "markdownlint-cli": "^0.31.1",
     "prettier": "2.7.1",
-    "rimraf": "3.0.2"
+    "rimraf": "5.0.5"
   },
   "jest": {
     "collectCoverage": true,
