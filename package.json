@@ -41,7 +41,7 @@
     "flow-copy-source": "2.0.2",
     "jest": "23.6.0",
     "markdownlint-cli": "^0.31.1",
-    "prettier": "2.7.1",
+    "prettier": "3.2.5",
     "rimraf": "3.0.2"
   },
   "jest": {
