@@ -31,17 +31,17 @@
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
-    "babel-eslint": "8.2.3",
+    "babel-eslint": "8.2.6",
     "babel-jest": "23.6.0",
     "babel-plugin-transform-flow-strip-types": "6.22.0",
     "babel-preset-es2015": "6.24.1",
     "babel-preset-stage-1": "6.24.1",
     "eslint": "4.19.1",
-    "flow-bin": "0.66.0",
-    "flow-copy-source": "2.0.2",
+    "flow-bin": "0.232.0",
+    "flow-copy-source": "2.0.9",
     "jest": "23.6.0",
-    "markdownlint-cli": "^0.31.1",
-    "prettier": "2.7.1",
+    "markdownlint-cli": "^0.39.0",
+    "prettier": "2.8.8",
     "rimraf": "3.0.2"
   },
   "jest": {
